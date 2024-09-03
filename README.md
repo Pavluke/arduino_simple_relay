@@ -1,11 +1,15 @@
 # Простая библиотека для управления реле.
 
 ### Добавляем библиотеку в проект:
-```cpp
-#include <SimpleRelay.h>
+```ini
+// Вписываем в platformio.ini
+lib_deps = https://github.com/pavluke/arduino_simple_relay.git
 ```
+
 ### Инициализация:
 ```cpp
+#include <SimpleRelay.h>
+
 // Пин, реле_нормально_разомкнуто 
 // Можно использовать `NORMALLY_OPEN`/`NORMALLY_CLOSE` (по дефолту NORMALLY_OPEN)
 SimpleRelay relay(int pin, bool is_normally_open);
